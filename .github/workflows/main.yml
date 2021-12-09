@@ -15,4 +15,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: KrakenD Integration
-        run: docker-compose -f docker-compose-acc.yml --exit-code-from=krakend-integration up krakend-integration
+        run: docker-compose -f docker-compose-acc.yml up --exit-code-from=krakend-integration krakend-integration
