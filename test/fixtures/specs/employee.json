@@ -1,0 +1,15 @@
+{
+  "in": {
+    "method": "GET",
+    "url": "http://localhost:8090/employee/456"
+  },
+  "out": {
+    "status_code": 200,
+    "body": {
+      "email": "employee456@mail.com",
+      "first_name": "First Name 456",
+      "id": 456,
+      "last_name": "Last Name 456"
+    }
+  }
+}

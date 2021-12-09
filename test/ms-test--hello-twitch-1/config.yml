@@ -1,0 +1,4 @@
+imposters_path: "stubs"
+host: "ms-test--hello-twitch-1"
+port: 80
+watcher: true

@@ -1,0 +1,15 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "endpoint": "/employee/456"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "bodyFile": "responses/employee.json"
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "in": {
+    "method": "GET",
+    "url": "http://localhost:8090/company/123/employee/456"
+  },
+  "out": {
+    "status_code": 200,
+    "body": {
+      "company": {
+        "city": "Barcelona",
+        "company_name": "Company 123",
+        "country": "Spain",
+        "email": "company123@mail.com",
+        "id": 123,
+        "phone": "123.456.789",
+        "suffix": "LLC",
+        "zip_code": "12345"
+      },
+      "email": "employee456@mail.com",
+      "first_name": "First Name 456",
+      "id": 456,
+      "last_name": "Last Name 456"
+    }
+  }
+}

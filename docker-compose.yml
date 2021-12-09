@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  krakend:
+    image: devopsfaith/krakend:1.4.1
+    ports:
+      - 8090:8090
+    volumes:
+      - ./conf:/etc/krakend
+
+  #ms-test--hello-twitch-1:
+  #  image: bitnami/kubectl:1.20.7
+  #  entrypoint: /app/scripts/kubectl-port-forward.sh ms-test--hello-twitch-1 80 8000
+  #  ports:
+  #    - 8080:80
+  #  volumes:
+  #    - ${HOME}/.kube/:/.kube
+  #    - ./test/scripts:/app/scripts
+
+  #ms-test--hello-twitch-2:
+  #  image: bitnami/kubectl:1.20.7
+  #  entrypoint: /app/scripts/kubectl-port-forward.sh ms-test--hello-twitch-2 80 8000
+  #  ports:
+  #    - 8081:80
+  #  volumes:
+  #    - ${HOME}/.kube/:/.kube
+  #    - ./test/scripts:/app/scripts
+
+  ms-test--hello-twitch-1:
+    image: friendsofgo/killgrave:0.4.1
+    working_dir: /app
+    command: -config config.yml
+    ports:
+      - 8080:80
+    volumes:
+      - ./test/ms-test--hello-twitch-1:/app
+
+  ms-test--hello-twitch-2:
+    image: friendsofgo/killgrave:0.4.1
+    working_dir: /app
+    command: -config config.yml
+    ports:
+      - 8081:80
+    volumes:
+      - ./test/ms-test--hello-twitch-2:/app

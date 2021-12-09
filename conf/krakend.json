@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "port": 8090,
+  "timeout": "1500ms",
+  "endpoints": [
+    {
+      "endpoint": "/company/{company_id}",
+      "headers_to_pass": [
+        "*"
+      ],
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "encoding": "no-op",
+          "host": [
+            "http://ms-test--hello-twitch-1"
+          ],
+          "url_pattern": "/company/{company_id}"
+        }
+      ]
+    },
+    {
+      "endpoint": "/company/{company_id}/employee/{employee_id}",
+      "headers_to_pass": [
+        "*"
+      ],
+      "backend": [
+        {
+          "group": "company",
+          "host": [
+            "http://ms-test--hello-twitch-1"
+          ],
+          "url_pattern": "/company/{company_id}"
+        },
+        {
+          "host": [
+            "http://ms-test--hello-twitch-2"
+          ],
+          "url_pattern": "/employee/{employee_id}"
+        }
+      ]
+    },
+    {
+      "endpoint": "/employee/{employee_id}",
+      "headers_to_pass": [
+        "*"
+      ],
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "encoding": "no-op",
+          "host": [
+            "http://ms-test--hello-twitch-2"
+          ],
+          "url_pattern": "/employee/{employee_id}"
+        }
+      ]
+    }
+  ]
+}

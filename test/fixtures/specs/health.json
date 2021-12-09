@@ -1,0 +1,10 @@
+{
+  "in": {
+    "method": "GET",
+    "url": "http://localhost:8090/__health"
+  },
+  "out": {
+    "status_code": 200,
+    "body": "{\"status\":\"ok\"}"
+  }
+}

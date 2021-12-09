@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  krakend-integration:
+    image: devopsfaith/krakend:1.4.1
+    ports:
+      - 8090:8090
+    depends_on:
+      - ms-test--hello-twitch-1
+      - ms-test--hello-twitch-2
+    entrypoint: /test/scripts/entrypoint.sh
+    volumes:
+      - ./conf:/etc/krakend
+      - ./test/fixtures:/test/fixtures
+      - ./test/scripts:/test/scripts
+
+  ms-test--hello-twitch-1:
+    image: friendsofgo/killgrave:0.4.1
+    working_dir: /app
+    command: -config config.yml
+    ports:
+      - 8080:80
+    volumes:
+      - ./test/ms-test--hello-twitch-1:/app
+
+  ms-test--hello-twitch-2:
+    image: friendsofgo/killgrave:0.4.1
+    working_dir: /app
+    command: -config config.yml
+    ports:
+      - 8081:80
+    volumes:
+      - ./test/ms-test--hello-twitch-2:/app
