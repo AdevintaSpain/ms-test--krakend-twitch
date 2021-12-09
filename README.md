@@ -2,7 +2,7 @@
 
 API Gateway for [ms-test--hello-twitch](https://github.com/AdevintaSpain/ms-test--hello-twitch) using [KrakenD](https://www.krakend.io/)
 
-This repo only contains the source code created on the live coding sessions, but not our platform stuff
+This repo uses the public docker image [devopsfaith/krakend](https://hub.docker.com/r/devopsfaith/krakend/) with a single [krakend.json](conf/krakend.json) file. As you can see in the live coding session, we use a customized KrakenD image maintained by our platform team 💙 that is much easier to configure!
 
 Watch this session on YouTube 👇
 
