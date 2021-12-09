@@ -2,7 +2,7 @@
 
 API Gateway for [ms-test--hello-twitch](https://github.com/AdevintaSpain/ms-test--hello-twitch) using [KrakenD](https://www.krakend.io/)
 
-This repo uses the public docker image [devopsfaith/krakend](https://hub.docker.com/r/devopsfaith/krakend/) with a single [krakend.json](conf/krakend.json) file. As you can see in the live coding session, we use a customized KrakenD image maintained by our platform team 💙 that is much easier to configure!
+This repo uses the public docker image [devopsfaith/krakend](https://hub.docker.com/r/devopsfaith/krakend/) with a single [krakend.json](conf/krakend.json) file. As you can see in the live coding session, we use a customized **KrakenD** image maintained by our platform team 💙 that is much easier to configure!
 
 Watch this session on YouTube 👇
 
@@ -34,11 +34,15 @@ curl http://localhost:8090/company/123/employee/456
 docker compose down
 ```
 
+![run-locally-1](doc/run-locally-1.png)
+
 ### Run locally against a real pod
 
 Just edit [docker-compose.yml](docker-compose.yml) and use the **bitnami/kubectl** container instead of the **friendsofgo/killgrave** one
 
 It will use your credentials to point to one pod in your current default kubernetes context and namespace
+
+![run-locally-2](doc/run-locally-2.png)
 
 ## Test
 
@@ -46,3 +50,5 @@ It will use your credentials to point to one pod in your current default kuberne
 docker-compose -f docker-compose-acc.yml up krakend-integration \
 ; docker-compose -f docker-compose-acc.yml rm -f
 ```
+
+![test](doc/test.png)
