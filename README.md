@@ -6,7 +6,7 @@ This repo uses the public docker image [devopsfaith/krakend](https://hub.docker.
 
 Watch this session on YouTube 👇
 
-5. [🐙 KrakenD API Gateway](https://www.youtube.com/watch?v=49LR6sasSBA&list=PLaZLZgOTnV42vfA4zGnNmw_ZCeoHaA8-G) with Filippo Machi & [@rogervinas](https://github.com/rogervinas)
+5. [🐙 KrakenD API Gateway](https://www.youtube.com/watch?v=49LR6sasSBA&list=PLaZLZgOTnV42vfA4zGnNmw_ZCeoHaA8-G) with [@fmachi](https://github.com/fmachi) & [@rogervinas](https://github.com/rogervinas)
 
 And the other series of :octocat: [ms-test--hello-twitch](https://github.com/AdevintaSpain/ms-test--hello-twitch):
 
