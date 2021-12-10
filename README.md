@@ -1,3 +1,5 @@
+[![CI](https://github.com/AdevintaSpain/ms-test--krakend-twitch/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/AdevintaSpain/ms-test--krakend-twitch/actions/workflows/main.yml)
+
 # Adevinta Spain MicroServices Live!
 
 API Gateway for [ms-test--hello-twitch](https://github.com/AdevintaSpain/ms-test--hello-twitch) using [KrakenD](https://www.krakend.io/)
